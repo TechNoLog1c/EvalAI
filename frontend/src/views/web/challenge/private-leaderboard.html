@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col s12 m12">
             <div class=" ev-card-panel ev-z-depth-5 ">
-                <div class="loader-container card-loader-container" id="loader" ng-show="challenge.isExistLoader" class="fade">
+                <div class="dloader-container card-loader-container" id="dloader" ng-show="challenge.isExistLoader" class="fade">
                     <div class="loader">
                         <div></div>
                         <div></div>
@@ -24,7 +24,7 @@
                         <div class="col xs12 s6">
                             <span>
                                 <md-select ng-model="challenge.phaseName" placeholder="Challenge Phase" class="rm-margin">
-                                    <md-option ui-sref="web.challenge-main.challenge-page.phase-leaderboard({phaseSplitId:key.id})" value="{{key.id}}" ng-repeat="key in challenge.phaseSplits" ng-show="{{!key.showPrivate}}"><span class="font-weight-b">Phase: </span>{{key.challenge_phase_name}}, <span class="font-weight-b">Split: </span> {{key.dataset_split_name}} &nbsp; <span class="new badge red" data-badge-caption="Private" ng-if="key.showPrivate"></span></md-option>
+                                    <md-option ui-sref="web.challenge-main.challenge-page.phase-leaderboard({phaseSplitId:key.id})" value="{{key.id}}" ng-repeat="key in challenge.phaseSplits" ng-show="{{key.showPrivate}}"><span class="font-weight-b">Phase: </span>{{key.challenge_phase_name}}, <span class="font-weight-b">Split: </span> {{key.dataset_split_name}} &nbsp; <span class="new badge red" data-badge-caption="Private" ng-if="key.showPrivate"></span></md-option>
                                 </md-select>
                             </span>
                         </div>

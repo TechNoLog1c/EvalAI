@@ -265,6 +265,14 @@
             title: 'Leaderboard',
         };
 
+        var private_leaderboard = {
+            name: "web.challenge-main.challenge-page.private-leaderboard",
+            parent: "web.challenge-main.challenge-page",
+            url: "/private-leaderboard",
+            templateUrl: baseUrl + "/web/challenge/private-leaderboard.html",
+            title: 'Private Leaderboard',
+        };
+
         var challenge_phase_leaderboard = {
             name: "web.challenge-main.challenge-page.phase-leaderboard",
             url: "/leaderboard/:phaseSplitId",
@@ -474,6 +482,7 @@
         $stateProvider.state(my_submission);
         $stateProvider.state(my_challenge_all_submission);
         $stateProvider.state(leaderboard);
+        $stateProvider.state(private_leaderboard);
         $stateProvider.state(challenge_phase_leaderboard);
 
         // featured challenge details
